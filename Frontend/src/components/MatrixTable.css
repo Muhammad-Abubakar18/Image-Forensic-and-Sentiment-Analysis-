@@ -1,0 +1,18 @@
+.matrix-table {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.matrix-table table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.matrix-table td {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #aaa;
+  font-size: 12px;
+  background-color: #f9f9f9;
+}

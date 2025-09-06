@@ -1,0 +1,252 @@
+.hash-table {
+  margin-bottom: 2rem;
+}
+
+.comparison-input {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.comparison-input label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.comparison-input input {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.comparison-input input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e9ecef;
+}
+
+.data-table th {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid #1a252f;
+}
+
+.data-table td {
+  padding: 12px 16px;
+  border: 1px solid #e9ecef;
+  text-align: left;
+  vertical-align: top;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+/* Column width distribution */
+.data-table th:first-child,
+.data-table td:first-child {
+  width: 15%;
+  min-width: 80px;
+}
+
+.data-table th:nth-child(2),
+.data-table td:nth-child(2) {
+  width: 70%;
+  min-width: 200px;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+  width: 15%;
+  min-width: 100px;
+  text-align: center;
+}
+
+.data-table .match td {
+  background-color: #e0ffe0;
+  font-weight: bold;
+}
+
+/* Hash value styling */
+.data-table td:nth-child(2) {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #2c3e50;
+  background-color: #f8f9fa;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 3px solid #28a745;
+  margin: 4px 0;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.data-table .match td:nth-child(2) {
+  background-color: #d4edda;
+  border-left-color: #28a745;
+  color: #155724;
+}
+
+/* Row styling */
+.data-table tbody tr {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.data-table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.data-table tbody tr:hover {
+  background-color: #e3f2fd;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.data-table tbody tr:hover td:nth-child(2) {
+  background-color: #e8f5e8;
+  border-left-color: #2e7d32;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #4A90E2; 
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #3A7BC8;
+  transform: translateY(-1px);
+}
+
+button:active {
+  background-color: #3570B5; 
+  transform: translateY(0);
+}
+
+button svg {
+  font-size: 14px;
+}
+
+.matrix-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  gap: 2rem; 
+  margin-top: 1rem;
+}
+
+.matrix-container h3 {
+  text-align: center;
+  width: 100%;
+}
+
+.jpeg-quality {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.jpeg-quality p {
+  justify-content: center; 
+}
+
+/* 📱 Responsive Tables */
+@media (max-width: 768px) {
+  .data-table {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* Adjust column widths for mobile */
+  .data-table th:first-child,
+  .data-table td:first-child {
+    width: 20%;
+    min-width: 60px;
+  }
+
+  .data-table th:nth-child(2),
+  .data-table td:nth-child(2) {
+    width: 60%;
+    min-width: 150px;
+  }
+
+  .data-table th:last-child,
+  .data-table td:last-child {
+    width: 20%;
+    min-width: 80px;
+  }
+
+  .data-table td:nth-child(2) {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+
+  .matrix-container {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .data-table th,
+  .data-table td {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .data-table td:nth-child(2) {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+
+  button {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
+

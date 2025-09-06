@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./Backend
+    container_name: fastapi-backend
+    ports:
+      - "8000:8000"
+    restart: always
+
+  frontend:
+    build:
+      context: ./Frontend
+    container_name: react-frontend
+    ports:
+      - "3000:80"
+    restart: always
